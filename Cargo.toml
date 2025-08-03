@@ -2,6 +2,8 @@
 name = "geojson-navmesh"
 version = "0.1.0"
 edition = "2024"
+description = "GeoJSON navmesh generation"
+license = "MIT"
 
 [dependencies]
 geojson = "0.24"
