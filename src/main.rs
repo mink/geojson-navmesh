@@ -3,8 +3,13 @@ use i_triangle::float::triangulatable::Triangulatable;
 use i_triangle::float::triangulation::Triangulation;
 
 fn main() {
-    let input = "input.geojson";
-    let output = "output.geojson";
+    let args: Vec<String> = std::env::args().collect();
+    if args.len() != 3 {
+        eprintln!("usage: {} <input> <output>", args[0]);
+        std::process::exit(1);
+    }
+    let input = &args[0];
+    let output = &args[1];
 
     let contents = std::fs::read_to_string(input)
         .expect("failed to read input");
