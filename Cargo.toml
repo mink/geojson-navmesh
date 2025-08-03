@@ -5,3 +5,4 @@ edition = "2024"
 
 [dependencies]
 geojson = "0.24"
+i_triangle = "^0.36.3"
